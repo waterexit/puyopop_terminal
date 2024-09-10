@@ -1,4 +1,4 @@
-#include "falling_puyos.h"
+// #include "falling_puyos.h"
 #include "cell.h"
 
 const int STATUS_INITIALIZE = 0;
@@ -9,12 +9,13 @@ const int STATUS_GAMEOVER = 99;
 class game {
   private:
     void drop_puyo();
-    void fall();
-    void set_field_moving_pos();
+    void fall(int frame);
+    void erase();
+    void set_field_moving_pos(char c);
   public:
     game();
-    moving_puyos movingPuyos;
+    // moving_puyos movingPuyos;
     int status;
-    bool check();
+    bool check(char input, int frame);
     cell stage[6][12];
 };

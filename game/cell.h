@@ -2,6 +2,7 @@
 #define cell_h
 class cell {
     char graph;
+    char color;
   public:
     cell();
     void set_empty();
